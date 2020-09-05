@@ -1,0 +1,110 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #E94B3CFF;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+  
+.sidebar a {
+    display: block;
+    color: #2D2926FF;
+    padding: 16px;
+    text-decoration: none;
+}
+   
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+  
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+  
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+}
+  
+@media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+}
+
+@font-face {
+    font-family: bebasNeue;
+    src: url(font/BebasNeue-Regular.woff);
+}
+  
+.bebsneue {
+    font-family: bebasNeue;
+}
+
+.h1size {
+    font-size: 6vw;
+}
+
+.h1sizehalf {
+    font-size: 3vw;
+}
+
+.centered {
+    text-align: center;
+}
+
+.firstLetter {
+    color: #2D2926FF;
+}
+
+.secondLetter {
+    color: #E94B3CFF;
+}
+
+.fa-about {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa-skills {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.fa-about:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.fa-linkedin {
+    background: #007bb5;;
+    color: white;
+}
+  
+.fa-github {
+    background: #211F1F;
+    color: white;
+}
