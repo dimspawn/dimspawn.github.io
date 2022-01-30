@@ -29,8 +29,12 @@
       function doEncode() {
         word = $("#word").val();
         let hash = CryptoJS.MD5(word);
-        hash = hash.toString() + "aA1";
-        $("#resq").text(hash);
+        hash = hash.toString().substr(0, 16);
+        hash += "aA1";
+        let hash2 = CryptoJS.MD5(hash);
+        hash2 = hash2.toString();
+        hash2 += "aA1";
+        $("#resq").text(hash2);
       }
 
       function doHide() {
