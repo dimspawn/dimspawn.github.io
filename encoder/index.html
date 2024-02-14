@@ -11,9 +11,8 @@
 
     <form method="post">
       <label for="word">Enter Word:</label>
-      <input type="password" id="word" name="word" /><br /><br />
+      <input type="text" id="word" name="word" /><br /><br />
       <p id="resq"></p>
-      <button id="dHide" type="button" onclick="doHide()">Unhide</button>
 
       <button type="button" onclick="doEncode()">Submit</button>
     </form>
@@ -37,16 +36,6 @@
         $("#resq").text(hash2);
       }
 
-      function doHide() {
-        let bText = $("#dHide").text();
-        if (bText == "Unhide") {
-          $("#word").attr("type", "text");
-          $("#dHide").html("Hide");
-        } else {
-          $("#word").attr("type", "password");
-          $("#dHide").html("Unhide");
-        }
-      }
     </script>
   </body>
 </html>
