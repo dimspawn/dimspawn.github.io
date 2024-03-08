@@ -13,6 +13,7 @@
       <label for="word">Enter Word:</label>
       <input type="text" id="word" name="word" /><br /><br />
       <p id="resq"></p>
+      <p id="resp"></p>
 
       <button type="button" onclick="doEncode()">Submit</button>
     </form>
@@ -25,15 +26,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
     <script>
+      word = $("#word").val();
       function doEncode() {
-        word = $("#word").val();
         let hash = CryptoJS.MD5(word);
         hash = hash.toString().substr(0, 16);
         hash += "aA1";
         let hash2 = CryptoJS.MD5(hash);
         hash2 = hash2.toString();
         hash2 += "aA1";
-        $("#resq").text(hash2);
+        let hash3 = "old code = " + hash2;
+        $("#resq").text(hash3);
+
+        let hash4 = CryptoJS.MD5(word).toString();
+        let hash5 = CryptoJS.MD5(hash4).toString() + "@aA1";
+        let hash6 = "new code = " + hash5;
+        $("#resp").text(hash6);
       }
 
     </script>
