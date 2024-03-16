@@ -26,8 +26,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
     <script>
-      word = $("#word").val();
       function doEncode() {
+        word = $("#word").val();
         let hash = CryptoJS.MD5(word);
         hash = hash.toString().substr(0, 16);
         hash += "aA1";
